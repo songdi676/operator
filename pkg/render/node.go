@@ -556,6 +556,12 @@ func (c *nodeComponent) nodeCNIConfigMap() *corev1.ConfigMap {
       }%s
     },
     {
+      "type": "pmvCni",
+      "kubernetes": {
+          "kubeconfig": "/etc/kubernetes/admin.conf"
+      }
+    },
+    {
       "type": "bandwidth",
       "capabilities": {"bandwidth": true}
     }%s
