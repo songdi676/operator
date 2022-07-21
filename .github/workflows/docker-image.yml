@@ -31,10 +31,10 @@ jobs:
       - name: Build Image
         run: |
           make image ARCH=amd64
-      - name: pusH
-        uses: manusa/actions-publish-docker@v1.1.2
-        with:
-          name: songdi676/operator
-          tag: latest-amd64
-          username: songdi676
-          password: qq8856676
+      - name: Login to DockerHub
+          uses: docker/login-action@v2
+          with:
+            username: songdi676
+            password: qq8856676
+      - name: push
+        run: docker push songdi676/operator:latest
