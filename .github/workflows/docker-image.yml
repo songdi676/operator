@@ -32,9 +32,10 @@ jobs:
         run: |
           make image ARCH=amd64
       - name: Login to DockerHub
-          uses: docker/login-action@v2
-          with:
-            username: songdi676
-            password: qq8856676
+        uses: docker/login-action@v2
+        with:
+          username: songdi676
+          password: qq8856676
       - name: push
-        run: docker push songdi676/operator:latest
+        run: |
+          docker push songdi676/operator:latest
