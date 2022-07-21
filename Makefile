@@ -141,7 +141,7 @@ CONTAINERIZED= mkdir -p .go-pkg-cache $(GOMOD_CACHE) && \
 		--net=host \
 		$(EXTRA_DOCKER_ARGS)
 
-BUILD_IMAGE?=tigera/operator
+BUILD_IMAGE?=songdi676/operator
 BUILD_INIT_IMAGE?=tigera/operator-init
 
 BINDIR?=build/_output/bin
